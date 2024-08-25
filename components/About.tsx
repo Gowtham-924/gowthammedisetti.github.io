@@ -26,7 +26,7 @@ const About = () => (
             <Image src="/images/LitAI-logo.png" alt="GitHub" width={50} height={50} />
           </a>
           <a href="https://shorturl.at/Y7eyX" target="_blank" rel="noopener noreferrer">
-            <Image src="/images/oracle-badge.png" alt="Oracle Certification" width={50} height={50} />
+            <Image src="/images/oracle-badge.jpg" alt="Oracle Certification" width={50} height={50} />
           </a>
           <a href="https://shorturl.at/uI6Mp" target="_blank" rel="noopener noreferrer">
             <Image src="/images/databricks-badge.png" alt="Databricks Certification" width={50} height={50} />
