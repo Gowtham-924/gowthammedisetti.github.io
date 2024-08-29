@@ -2,39 +2,30 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import styles from '../styles/Home.module.scss';
 
-const Experience = () => {
-  const timelineData = [
-    {
-      title: "Generative AI Engineer",
-      company: "Phenom Pvt. Ltd.",
-      date: "2020 - 2024",
-      description: "Developed and optimized AI-driven products, focusing on generative models and NLP to enhance user experience and drive innovation across the Talent Experience platform.",
-      logo: "/images/phenom-logo.png"  // Ensure the correct path
-    },
-    {
-      title: "Research Assistant",
-      company: "University of North Texas",
-      date: "2022 - 2024",
-      description: "Conducted research on advanced NLP techniques and generative AI, contributing significantly to the 'GenLitAI' project, which focuses on automated literature mining using AI.",
-      logo: "/images/unt-logo.jpg"  // Ensure the correct path
-    },
-    // Add more experiences as needed
-  ];
+// Define the type for the item prop
+interface TimelineItem {
+  title: string;
+  company: string;
+  date: string;
+  description: string;
+  logo: string;
+}
 
-  const timelineData = [
+const Experience = () => {
+  const timelineData: TimelineItem[] = [
     {
       title: "Generative AI Engineer",
       company: "Phenom Pvt. Ltd.",
       date: "2020 - 2024",
       description: "Developed and optimized AI-driven products, focusing on generative models and NLP to enhance user experience and drive innovation across the Talent Experience platform.",
-      logo: "/images/phenom-logo.png"  // Ensure the correct path
+      logo: "/images/phenom-logo.png"  // Ensure the correct path to your logo
     },
     {
       title: "Research Assistant",
       company: "University of North Texas",
       date: "2022 - 2024",
       description: "Conducted research on advanced NLP techniques and generative AI, contributing significantly to the 'GenLitAI' project, which focuses on automated literature mining using AI.",
-      logo: "/images/unt-logo.jpg"  // Ensure the correct path
+      logo: "/images/unt-logo.jpg"  // Ensure the correct path to your logo
     },
     // Add more experiences as needed
   ];
@@ -49,7 +40,8 @@ const Experience = () => {
   );
 };
 
-const TimelineCard = ({ item }) => {
+// Add TypeScript annotation for the item prop
+const TimelineCard: React.FC<{ item: TimelineItem }> = ({ item }) => {
   const [isExpanded, setIsExpanded] = useState(false);
   const toggleExpand = () => setIsExpanded(!isExpanded);
 
@@ -77,7 +69,7 @@ const TimelineCard = ({ item }) => {
             : `${item.description.slice(0, 150)}...`}
           {isDescriptionLong && (
             <span onClick={toggleExpand} className={styles.showMoreText}>
-              {isExpanded ? "" : "Show More"}
+              {isExpanded ? "Show Less" : "Show More"}
             </span>
           )}
         </p>
