@@ -1,46 +1,66 @@
-import { useState } from 'react';
+// components/Skills.tsx
+
+import React, { useState } from 'react';
 import styles from '../styles/Home.module.scss';
 
 const skillsData = [
-  { title: 'Generative AI & NLP', icon: '🤖', skills: ['GPT Series', 'Transformers', 'Language Models', 'Text Generation'] },
-  { title: 'Machine Learning & AI', icon: '📊', skills: ['TensorFlow', 'PyTorch', 'Model Optimization', 'Data Augmentation'] },
-  { title: 'Cloud & DevOps', icon: '☁️', skills: ['Azure OpenAI', 'AWS', 'Docker', 'Kubernetes'] },
-  { title: 'Programming Languages', icon: '💻', skills: ['Python', 'Java (OOP)', 'JavaScript'] },
-  { title: 'Data Mining & Tools', icon: '🔍', skills: ['SQL', 'Redis', 'MongoDB', 'Web Scraping'] },
-  { title: 'Frameworks & Libraries', icon: '📚', skills: ['Spring Boot', 'React.js', 'scikit-learn'] },
-  // Add more cards as needed
+  { name: 'Generative AI', isTopSkill: true },
+  { name: 'NLP', isTopSkill: true },
+  { name: 'GPT Series' },
+  { name: 'Transformers' },
+  { name: 'Azure OpenAI', isTopSkill: true },
+  { name: 'AWS' },
+  { name: 'Docker' },
+  { name: 'Python' },
+  { name: 'Java (OOP)' },
+  { name: 'JavaScript' },
+  { name: 'SQL' },
+  { name: 'Redis' },
+  { name: 'AWS' },
+  { name: 'Docker' },
+  { name: 'Python' },
+  { name: 'Java (OOP)' },
+  { name: 'JavaScript' },
+  { name: 'SQL' },
+  { name: 'Redis' },
+  { name: 'AWS' },
+  { name: 'Docker' },
+  { name: 'Python' },
+  { name: 'Java (OOP)' },
+  { name: 'JavaScript' },
+  { name: 'SQL' },
+  { name: 'Redis' }
+  // Add more skills as needed
 ];
 
 const Skills = () => {
-  const [visible, setVisible] = useState(3); // Initially display only 3 cards
+  const [visible, setVisible] = useState(110); // Initially display only 3 lines of skills
 
   const loadMore = () => {
-    setVisible(skillsData.length); // Reveal all cards on click
+    setVisible(skillsData.length); // Reveal all skills on click
   };
 
   return (
     <section id="skills" className={styles.skillsSection}>
-      <h2 className={styles.sectionTitle}>Technical Skills</h2>
+      <h2 className={styles.sectionTitle}>My Skills</h2>
       <div className={styles.skillsGrid}>
-        {skillsData.slice(0, visible).map((category, index) => (
-          <div key={index} className={styles.skillCard}>
-            <h3>
-              <span className={styles.skillIcon}>{category.icon}</span> 
-              {category.title}
-            </h3>
-            <ul>
-              {category.skills.map((skill, i) => (
-                <li key={i}>{skill}</li>
-              ))}
-            </ul>
+        {skillsData.slice(0, visible).map((skill, index) => (
+          <div key={index} className={`${styles.skillBadge} ${skill.isTopSkill ? styles.topSkill : ''}`}>
+            {skill.isTopSkill && <span className={styles.topSkillStar}>★</span>}
+            {skill.name}
           </div>
         ))}
       </div>
       {visible < skillsData.length && (
-        <button className={styles.loadMoreButton} onClick={loadMore}>
-          Load More
-        </button>
+        <div className={styles.loadMoreContainer}>
+          <button className={styles.loadMoreButton} onClick={loadMore}>
+            Load More
+          </button>
+        </div>
       )}
+
+      {/* Include the SkillsCarousel component */}
+      {/* <SkillsCarousel /> */}
     </section>
   );
 };
