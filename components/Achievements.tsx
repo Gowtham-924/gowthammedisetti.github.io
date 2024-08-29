@@ -1,4 +1,5 @@
 import { FaMedal, FaTrophy, FaCertificate } from 'react-icons/fa';
+import { FaMedal, FaTrophy, FaCertificate } from 'react-icons/fa';
 import styles from '../styles/Home.module.scss';
 
 const Achievements = () => (

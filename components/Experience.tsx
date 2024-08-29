@@ -21,6 +21,24 @@ const Experience = () => {
     // Add more experiences as needed
   ];
 
+  const timelineData = [
+    {
+      title: "Generative AI Engineer",
+      company: "Phenom Pvt. Ltd.",
+      date: "2020 - 2024",
+      description: "Developed and optimized AI-driven products, focusing on generative models and NLP to enhance user experience and drive innovation across the Talent Experience platform.",
+      logo: "/images/phenom-logo.png"  // Ensure the correct path
+    },
+    {
+      title: "Research Assistant",
+      company: "University of North Texas",
+      date: "2022 - 2024",
+      description: "Conducted research on advanced NLP techniques and generative AI, contributing significantly to the 'GenLitAI' project, which focuses on automated literature mining using AI.",
+      logo: "/images/unt-logo.jpg"  // Ensure the correct path
+    },
+    // Add more experiences as needed
+  ];
+
   return (
     <section id="experience" className={styles.experienceSection}>
       <h2 className={styles.sectionTitle}>My Experience</h2>
