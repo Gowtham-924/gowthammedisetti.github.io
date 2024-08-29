@@ -1,18 +1,14 @@
-// components/Experience.js
-
 import React from 'react';
+import Image from 'next/image';
 import styles from './../styles/Home.module.scss';
 
 const Experience = () => {
   return (
-    
     <section id="experience" className={styles.experienceSection}>
-      {/* <h2>Experience</h2> */}
-
       <div className={styles.cardContainer}>
         <div className={styles.headerContainer}>
           <div className={styles.logoContainer}>
-            <img src="/images/phenom-logo.png" alt="Phenom Pvt. Ltd. Logo" />
+            <Image src="/images/phenom-logo.png" alt="Phenom Pvt. Ltd. Logo" width={50} height={50} />
           </div>
           <div>
             <h3 className={styles.jobTitle}>Generative AI Engineer</h3>
@@ -28,7 +24,7 @@ const Experience = () => {
       <div className={styles.cardContainer}>
         <div className={styles.headerContainer}>
           <div className={styles.logoContainer}>
-            <img src="/images/unt-logo.jpg" alt="University of North Texas Logo" />
+            <Image src="/images/unt-logo.jpg" alt="University of North Texas Logo" width={50} height={50} />
           </div>
           <div>
             <h3 className={styles.jobTitle}>Research Assistant</h3>
@@ -37,7 +33,7 @@ const Experience = () => {
         </div>
         <p className={styles.jobDates}>2022 - 2024</p>
         <p className={styles.jobDescription}>
-          Conducted research on advanced NLP techniques and generative AI, contributing significantly to the "GenLitAI" project, which focuses on automated literature mining using AI.
+          Conducted research on advanced NLP techniques and generative AI, contributing significantly to the &quot;GenLitAI&quot; project, which focuses on automated literature mining using AI.
         </p>
       </div>
       
