@@ -2,8 +2,17 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import styles from '../styles/Home.module.scss';
 
+// Define the type for the item prop
+interface TimelineItem {
+  title: string;
+  company: string;
+  date: string;
+  description: string;
+  logo: string;
+}
+
 const Experience = () => {
-  const timelineData = [
+  const timelineData: TimelineItem[] = [
     {
       title: "Generative AI Engineer",
       company: "Phenom Pvt. Ltd.",
@@ -31,7 +40,8 @@ const Experience = () => {
   );
 };
 
-const TimelineCard = ({ item }) => {
+// Add TypeScript annotation for the item prop
+const TimelineCard: React.FC<{ item: TimelineItem }> = ({ item }) => {
   const [isExpanded, setIsExpanded] = useState(false);
   const toggleExpand = () => setIsExpanded(!isExpanded);
 
