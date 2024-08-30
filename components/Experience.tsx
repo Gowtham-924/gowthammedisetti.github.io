@@ -45,7 +45,7 @@ const TimelineCard: React.FC<{ item: TimelineItem }> = ({ item }) => {
   const [isExpanded, setIsExpanded] = useState(false);
   const toggleExpand = () => setIsExpanded(!isExpanded);
 
-  const isDescriptionLong = item.description.length > 150;
+  const isDescriptionLong = item.description.length > 1500;
 
   return (
     <motion.div
@@ -66,10 +66,10 @@ const TimelineCard: React.FC<{ item: TimelineItem }> = ({ item }) => {
         <p className={styles.timelineDescription}>
           {isExpanded || !isDescriptionLong
             ? item.description
-            : `${item.description.slice(0, 150)}...`}
+            : `${item.description.slice(0, 200)}...`}
           {isDescriptionLong && (
             <span onClick={toggleExpand} className={styles.showMoreText}>
-              {isExpanded ? "Show Less" : "Show More"}
+              {isExpanded ? " " : "Show More"}
             </span>
           )}
         </p>

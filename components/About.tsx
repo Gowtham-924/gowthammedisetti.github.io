@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/fa';
 import styles from '../styles/Home.module.scss';
 
 const About = () => (
@@ -6,6 +7,21 @@ const About = () => (
     <div className={styles.aboutContent}>
       <div className={styles.aboutImage}>
         <Image src="/images/profile.jpg" alt="Gowtham Medisetti" className={styles.profileImg} width={200} height={200} />
+
+        {/* Get in Touch Button */}
+        <a href="mailto:medisettigowtham924@gmail.com" className={styles.getInTouchButton}>Hire Me!</a>        
+        {/* Contact Icons below the button */}
+        <div className={styles.contactIcons}>
+          <a href="https://www.linkedin.com/in/gowtham-medisetti/" target="_blank" rel="noopener noreferrer">
+            <FaLinkedin />
+          </a>
+          <a href="https://github.com/Gowtham-924" target="_blank" rel="noopener noreferrer">
+            <FaGithub />
+          </a>
+          <a href="mailto:medisettigowtham924@gmail.com" target="_blank" rel="noopener noreferrer">
+            <FaEnvelope />
+          </a>
+        </div>
       </div>
       <div className={styles.divider}></div> {/* Divider */}
       <div className={styles.aboutText}>
@@ -17,22 +33,22 @@ const About = () => (
         Honored as an<a href="https://research.unt.edu/magazine/ai-student-scholars" target="_blank" rel="noopener noreferrer"> AI Student Scholar</a> at UNT, I’m committed to pushing AI boundaries to solve complex challenges. 
         I hold Generative AI certifications from <a href="https://shorturl.at/Y7eyX" target="_blank" rel="noopener noreferrer">Oracle</a> and <a href="https://shorturl.at/uI6Mp" target="_blank" rel="noopener noreferrer">Databricks</a>, with strong hands-on expertise in Azure OpenAI, complementing my solid foundation in software engineering and cloud platforms including AWS.
         </p>       
-  
+
         <div className={styles.certifications}>
           <a href="https://shorturl.at/8JaBt" target="_blank" rel="noopener noreferrer">
-            <Image src="/images/IEEE-logo.png" alt="IEEE MIPR 2023" width={60} height={60} />
+            <img src="/images/IEEE-logo.png" alt="IEEE MIPR 2023" />
           </a>
           <a href="https://shorturl.at/LE0vY" target="_blank" rel="noopener noreferrer">
-            <Image src="/images/LitAI-logo.png" alt="GitHub" width={60} height={60} />
+            <img  src="/images/LitAI-logo.png"  alt="GitHub" />
           </a>
           <a href="https://shorturl.at/Y7eyX" target="_blank" rel="noopener noreferrer">
-            <Image src="/images/oracle-badge.jpg" alt="Oracle Certification" width={60} height={60} />
+            <img src="/images/oracle-badge.png" alt="Oracle Certification" />
           </a>
           <a href="https://shorturl.at/uI6Mp" target="_blank" rel="noopener noreferrer">
-            <Image src="/images/databricks-badge.png" alt="Databricks Certification" width={60} height={60} />
+            <img  src="/images/databricks-badge.png"  alt="Databricks Certification" />
           </a>
           <a href="https://shorturl.at/GykoP" target="_blank" rel="noopener noreferrer">
-            <Image src="/images/UNT-research-logo.png" alt="AI student scholar" width={60} height={60} />
+            <img  src="/images/UNT-research-logo.png"  alt="AI student scholar" />
           </a>
         </div>
       </div>
