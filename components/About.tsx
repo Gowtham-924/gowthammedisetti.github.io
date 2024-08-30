@@ -42,7 +42,7 @@ const About = () => (
             <img  src="/images/LitAI-logo.png"  alt="GitHub" />
           </a>
           <a href="https://shorturl.at/Y7eyX" target="_blank" rel="noopener noreferrer">
-            <img src="/images/oracle-badge.png" alt="Oracle Certification" />
+            <img src="/images/Oracle-badge.png" alt="Oracle Certification" />
           </a>
           <a href="https://shorturl.at/uI6Mp" target="_blank" rel="noopener noreferrer">
             <img  src="/images/databricks-badge.png"  alt="Databricks Certification" />

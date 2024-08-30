@@ -63,7 +63,7 @@ const achievementsData = [
     icon: <FaMedal />,
     title: 'Oracle Cloud Infrastructure 2024 Generative AI Professional Certification',
     details: 'Achieved professional certification in Generative AI, demonstrating expertise in OCI infrastructure and AI services.',
-    image: '/images/oracle-badge.png',  // Path to the badge image
+    image: '/images/Oracle-badge.png',  // Path to the badge image
     url: 'https://www.credly.com/badges/your-credential-url',  // URL to the credential
   },
   {
@@ -88,7 +88,7 @@ const achievementsData = [
     icon: <FaMedal />,
     title: 'Honored as an AI Student Scholar at UNT',
     details: 'Recognized as an AI Student Scholar for outstanding research and academic achievements in the field of AI.',
-    image: '/images/unt-research-logo.png',
+    image: '/images/UNT-research-logo.png',
     url: 'https://research.unt.edu/magazine/ai-student-scholars',
   },
   {
