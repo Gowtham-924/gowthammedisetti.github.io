@@ -5,13 +5,14 @@ import styles from '../styles/Home.module.scss';
 const Achievements = () => {
   const [activeIndices, setActiveIndices] = useState(achievementsData.map((_, index) => index));  // Initialize with all indices
 
-  const toggleAccordion = (index) => {
+  const toggleAccordion = (index: number) => {
     if (activeIndices.includes(index)) {
       setActiveIndices(activeIndices.filter(i => i !== index));
     } else {
       setActiveIndices([...activeIndices, index]);
     }
   };
+  
 
   return (
     <section id="achievements" className={styles.achievementsSection}>
